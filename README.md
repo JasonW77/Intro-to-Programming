@@ -1,6 +1,5 @@
-# Intro-to-Programming
 # Jason Waters
-### Southwest Technical College
+### Southwest Technical College, (CSCI 1105, Intro-to-Programming)
 
 _I am using this repository to save my assignments, as well as to use those assignments as a portfolio for future potential employers._
 
