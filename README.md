@@ -1,7 +1,7 @@
 # Jason Waters
 ### Southwest Technical College, (CSCI 1105, Intro-to-Programming)
 
-_I am using this repository to save my assignments, as well as to use those assignments as a portfolio for future potential employers._
+_this repository contains my coursework for CSCI 1105 - Introduction to Programming at Southwest Tech. I am using this repository to save my assignments, as well as to use those assignments as a portfolio for future potential employers._
 
 *(Bio Goes Here)*
 
