@@ -6,4 +6,4 @@ _this repository contains my coursework for CSCI 1105 - Introduction to Programm
 *(Bio Goes Here)*
 
 _I am taking this program because I have always had an aptitude and keen interest in programing and thought that it was about time I did something about it. 
-I would love to work as a programmer or create my own programs someday._
+I would love to work as a programmer or create my own programs._
