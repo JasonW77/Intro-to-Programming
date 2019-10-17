@@ -31,6 +31,7 @@ public class threedashnineteen {
 			if (side3 <= side1 + side2) { ;
 				System.out.println("input is not valid") ;
 			}
-			else {System.out.println("Perimeter is: " + (side1+side2+side3)) ;
+			else {int perimeter = (side1+side2+side3) ;
+				System.out.println("Perimeter is: " + perimeter) ;
 	}}
 }
