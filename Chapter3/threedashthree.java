@@ -13,22 +13,22 @@ public class threedashthree {
 		//Prompt the user to enter a, and assign to a.
 		System.out.print("Enter a: ") ;
 		//reads users input for (a) in a double value from the console
-		double a = input.nextInt() ;
+		double a = input.nextdouble() ;
 				
 		//Prompt the user to enter b, and assign to b.
 		System.out.print("Enter b: ") ;
 		//reads users input for (b) in a double value from the console
-		double b = input.nextInt() ;
+		double b = input.nextdouble() ;
 				
 		//Prompt the user to enter c, and assign to c.
 		System.out.print("Enter c: ") ;
 		//reads users input for (c) in a double value from the console
-		double c = input.nextInt() ;
+		double c = input.nextdouble() ;
 				
 		//Prompt the user to enter d, and assign to d.
 		System.out.print("Enter d: ") ;
 		//reads users input for (d) in a double value from the console
-		double d = input.nextInt() ;
+		double d = input.nextdouble() ;
 				
 		//Check to see if (ad - bc) = 0, if (ad - bc) = 0 stop, and display the message “The equation has no solution.”
 		if ( (a * d - b * c) == 0 ) {
@@ -39,16 +39,16 @@ public class threedashthree {
 			//Prompt the user to enter e, and assign to e.
 			System.out.print("Enter e: ") ;
 			//reads users input for (e) in a double value from the console
-			double e = input.nextInt() ;
+			double e = input.nextdouble() ;
 		
 			//Prompt the user to enter f, and assign to f.
 			System.out.print("Enter f: ") ;
 			//reads users input for (f) in a double value from the console
-			double f = input.nextInt() ;
+			double f = input.nextdouble() ;
 		
 			//Solve for x, and y.
-			int x = (e * d - b * f) / (a * d - b * c) ;
-			int y = (a * f - e * c) / (a * d - b * c) ;
+			double x = (e * d - b * f) / (a * d - b * c) ;
+			double y = (a * f - e * c) / (a * d - b * c) ;
 		
 			//Display x, and y.
 			System.out.println("x is " + x );
