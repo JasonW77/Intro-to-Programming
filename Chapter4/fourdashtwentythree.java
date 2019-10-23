@@ -29,13 +29,13 @@ public class fourdashtwentythree {
 		
 		//Prompt the user to enter federal tax withholdings
 		System.out.print("Enter the Federal Tax: ") ;
-		//Read input and store as double fed
-		double federal = input.nextDouble() ;
+		//Read input and store as int fed
+		int federal = input.nextint() ;
 		
 		//Prompt user to enter state tax withholdings
 		System.out.print("Enter the State Tax: ") ;
-		//Read input and store as double state
-		double state = input.nextDouble() ;
+		//Read input and store as int state
+		int state = input.nextint() ;
 		
 		//Validity checks
 		
@@ -53,13 +53,13 @@ public class fourdashtwentythree {
 			//Federal and state deductions % and total
 			System.out.print("Deductions:") ;
 				//Federal withholdings
-				System.out.print("Federal Withholding (federal):%.2f " + (federal * (hours * payrate)) ;
+				System.out.print("Federal Withholding (federal):%.2f " + (federal * (hours * payrate))) ;
 				//State withholdings
-				System.out.print("State Withholding (state):%.2f " + (state * (hours * payrate)) ;
+				System.out.print("State Withholding (state):%.2f " + (state * (hours * payrate))) ;
 				//Total deduction
-				System.out.print("Total Deduction:%.2f " + ((federal * (hours * payrate) + (state * (hours * payrate))) ;
+				System.out.print("Total Deduction:%.2f " + ((federal * (hours * payrate) + (state * (hours * payrate))))) ;
 			//Net pay
-			System.out.print("Net Pay:%.2f" + (hours * payrate) - (federal * (hours * payrate) + (state * (hours * payrate)) ) ;
+			System.out.print("Net Pay:%.2f" + (hours * payrate) - (federal * (hours * payrate) + (state * (hours * payrate))) ) ;
 			
 
 		}
