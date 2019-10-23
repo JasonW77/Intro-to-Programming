@@ -45,11 +45,11 @@ public class fourdashtwentythree {
 			//Name
 			System.out.print("Employee Name: " + s1 ) ;
 			//Hours
-			System.out.print("Hours Worked: " hours ) ;
+			System.out.print("Hours Worked: " + hours ) ;
 			//Pay rate
-			System.out.print("Pay Rate:%.2f " payrate ) ;
+			System.out.print("Pay Rate:%.2f " + payrate ) ;
 			//Gross pay
-			System.out.print("Gross Pay:%.2f " hours * payrate ) ;
+			System.out.print("Gross Pay:%.2f " + (hours * payrate) ) ;
 			//Federal and state deductions % and total
 			System.out.print("Deductions:") ;
 				//Federal withholdings
@@ -57,9 +57,9 @@ public class fourdashtwentythree {
 				//State withholdings
 				System.out.print("State Withholding (state):%.2f " + (state * (hours * payrate)) ;
 				//Total deduction
-				System.out.print("Total Deduction:%.2f " + (fedto + stato) ;
+				System.out.print("Total Deduction:%.2f " + ((federal * (hours * payrate) + (state * (hours * payrate))) ;
 			//Net pay
-			System.out.print("Net Pay:%.2f" + (hours * payrate) - (stato + fedto) ) ;
+			System.out.print("Net Pay:%.2f" + (hours * payrate) - (federal * (hours * payrate) + (state * (hours * payrate)) ) ;
 			
 
 		}
