@@ -13,53 +13,49 @@ public class fourdashtwentythree {
 		Scanner input = new Scanner(System.in) ;
 		
 		//Prompt the user to Enter employees name
-		System.out.print("Enter the Employees Name: ") ;
+		System.out.print("Enter employee's name: ") ;
 		//Read input and store value as String s1
-		String s1 = input.nextline() ;
+		String s1 = input.nextLine() ;
 		
 		//Prompt the user to Enter hours worked
-		System.out.print("Enter the Hours Worked: ") ;
+		System.out.print("Enter number of hours worked: ") ;
 		//Read input and store value as double hours
 		double hours = input.nextDouble() ;
 		
 		//Prompt user to enter employee pay rate
-		System.out.print("Enter the Hourly Rate: ") ;
+		System.out.print("Enter hourly pay rate: ") ;
 		//Read input and store as double pay
 		double payrate = input.nextDouble() ;
 		
 		//Prompt the user to enter federal tax withholdings
-		System.out.print("Enter the Federal Tax: ") ;
+		System.out.print("Enter Federal Tax rate: ") ;
 		//Read input and store as int fed
-		int federal = input.nextint() ;
+		double federal = input.nextDouble() ;
 		
 		//Prompt user to enter state tax withholdings
-		System.out.print("Enter the State Tax: ") ;
+		System.out.print("Enter State Tax rate: ") ;
 		//Read input and store as int state
-		int state = input.nextint() ;
-		
-		//Validity checks
-		
-		//Computations
+		double state = input.nextDouble() ;
 		
 		//Print payroll statement displaying:
 			//Name
-			System.out.print("Employee Name: " + s1 ) ;
+			System.out.println("\nEmployee Name: " + s1 ) ;
 			//Hours
-			System.out.print("Hours Worked: " + hours ) ;
+			System.out.println("Hours Worked: " + hours ) ;
 			//Pay rate
-			System.out.print("Pay Rate:%.2f " + payrate ) ;
+			System.out.printf("Pay Rate: $%.2f " , payrate ) ;
 			//Gross pay
-			System.out.print("Gross Pay:%.2f " + (hours * payrate) ) ;
+			System.out.printf("\nGross Pay: $%.2f " , (hours * payrate) ) ;
 			//Federal and state deductions % and total
-			System.out.print("Deductions:") ;
-				//Federal withholdings
-				System.out.print("Federal Withholding (federal):%.2f " + (federal * (hours * payrate))) ;
-				//State withholdings
-				System.out.print("State Withholding (state):%.2f " + (state * (hours * payrate))) ;
-				//Total deduction
-				System.out.print("Total Deduction:%.2f " + ((federal * (hours * payrate) + (state * (hours * payrate))))) ;
+			System.out.print("\nDeductions:") ;
+			//Federal withholdings
+			System.out.printf("\n\tFederal Withholding: (%.1f): $%.2f " , federal * 100 , (federal * (hours * payrate))) ;
+			//State withholdings
+			System.out.printf("\n\tState Withholding: (%.1f%%): $%.2f " , state * 100 , (state * (hours * payrate))) ;
+			//Total deduction
+			System.out.printf("\n\tTotal Deduction: $%.2f " , ((federal * (hours * payrate) + (state * (hours * payrate))))) ;
 			//Net pay
-			System.out.print("Net Pay:%.2f" + (hours * payrate) - (federal * (hours * payrate) + (state * (hours * payrate))) ) ;
+			System.out.printf("\nNet Pay: $%.2f" ,  (hours * payrate) - (federal * (hours * payrate) + (state * (hours * payrate))));
 			
 
 		}
