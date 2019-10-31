@@ -32,7 +32,7 @@ public class sixdashthirtyseven {
 		String end = "";
 	
 		//creating 0's needed and putting them in end
-		for (int ret = width - str.length();ret > 0; ret--) {
+		for (int cnt = width - str.length();cnt > 0; cnt--) {
 			end += "0"; 
 		}
 		
