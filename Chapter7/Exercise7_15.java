@@ -10,41 +10,44 @@ public class Exercise7_15 {
 		
 		Scanner input = new Scanner(System.in);
 		double[] array = new double[10];
-		
 		//read in ten integers and populate array
 		for (int d = 0; d < array.length; d++){
 			System.out.print("Enter Number: ");
 			array[d] = input.nextDouble();
 		}	 
-		eliminateDuplicates(int[] list)
-		
-		
-		System.out.print("The number of distinct numbers is " + double);
-		System.out.print("Array without duplicates: " + double);
-		
-	}		
-	public static int[] eliminateDuplicates(int[] list){
-		
-		for (int i = 0; i < array.length; i++) {
-			if (array[i] < mmin) {
-				mmin = array[i];
-			}
-
-			
+		//call method eliminateDuplicates()
+		double[] end = eliminateDuplicates(array);
+		int cnt = 0;
+		//Display the result
+		System.out.println("The number of distinct numbers is " + end.length);
+		System.out.print("Array without duplicates: ");
+			for (int i = 0; i < end.length; i++) {
+				System.out.print(end[i] + " ");
 		}
+	}		
+	public static double[] eliminateDuplicates(double[] list){
+		double[] list2 = new double[list.length];
+		boolean duplicate = false;
+		int pos = 0;
+		for (int d = 0; d < list.length; d++){
+			for (int c = 0; c < list2.length; c++){
+				if(list[d] == list2[c]){
+					duplicate = true;	
+				}
+			}
+			if (duplicate == false){
+				list2[pos] = list[d];
+				pos++;
+			}
+			else {
+				duplicate = false;
+			}
+		}
+		double[] end = new double[pos];
+	
+		for (int i = 0; i < pos; i++) {
+			end[i] = list2[i];
+		}
+		return end;
 	}
-	
-	//public static double min(double array[]) {
-	
-		//double mmin = Integer.MAX_VALUE	;
-		//find minimum number entered
-		//		//}
-		//return mmin;
-	//}	
 }
-
-
-
-//Write a test program that reads in ten integers, invokes the method, and displays the result.
-
-//(Hint: Use a for loop to read in the 10 values from the user. Create a method for eliminating the duplicates which accepts the user's array as a parameter. In the method, create a new array for storing the non-duplicates with the same size as the user's array.)
