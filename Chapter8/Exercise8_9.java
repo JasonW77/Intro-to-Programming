@@ -7,7 +7,7 @@ import java.util.Scanner ;
 public class Exercise8_9 {
 	public static void main(String[] args) {
 		
-		String[][] game = /*new String[3][3];*/ {
+		String[][] game = {
 			{" ", " ", " "},
 			{" ", " ", " "},
 			{" ", " ", " "},
@@ -17,9 +17,9 @@ public class Exercise8_9 {
 		
 		for (int g = 0; g < 5; g++) {
 			for (int px = 0; px < 1; px++) {
-				System.out.println("Enter a row (0, 1, or 2) for player X: ");
+				System.out.print("Enter a row (0, 1, or 2) for player X: ");
 				int xr = input.nextInt();
-				System.out.println("Enter a column (0, 1, or 2) for player X: ");
+				System.out.print("Enter a column (0, 1, or 2) for player X: ");
 				int xc = input.nextInt();
 					if (game[xr][xc] == " "){
 						game[xr][xc] = "X";
@@ -33,18 +33,20 @@ public class Exercise8_9 {
 						px--;
 					}
 				
-				for (int i = 0; i < game.length; i++) {
-					System.out.println(" ");
-					for (int j = 0; j < game[i].length; j++) {
-						System.out.print("|" + (game[i][j]));
-					}
-				}
+				System.out.println("-------");
+				System.out.println("|" +(game[0][0]) + "|" + (game[0][1]) +"|"+ (game[0][2])+ "|");
+				System.out.println("-------");
+				System.out.println("|" +(game[1][0]) + "|" + (game[1][1]) +"|"+ (game[1][2])+ "|");
+				System.out.println("-------");
+				System.out.println("|" +(game[2][0]) + "|" + (game[2][1]) +"|"+ (game[2][2])+ "|");
+				System.out.println("-------");
+
 			}
 			if (g < 4){
 				for (int po = 0; po < 1; po++) {
-				System.out.println("Enter a row (0, 1, or 2) for player O: ");
+				System.out.print("Enter a row (0, 1, or 2) for player O: ");
 				int or = input.nextInt();
-				System.out.println("Enter a column (0, 1, or 2) for player O: ");
+				System.out.print("Enter a column (0, 1, or 2) for player O: ");
 				int oc = input.nextInt();
 					if (game[or][oc] == " "){
 						game[or][oc] = "O";
@@ -58,12 +60,14 @@ public class Exercise8_9 {
 						po--;
 					}
 				}	
-				for (int i = 0; i < game.length; i++) {
-					System.out.println(" ");
-					for (int j = 0; j < game[i].length; j++) {
-						System.out.print("|" + (game[i][j]));
-					}
-				}
+				System.out.println("-------");
+				System.out.println("|" +(game[0][0]) + "|" + (game[0][1]) +"|"+ (game[0][2])+ "|");
+				System.out.println("-------");
+				System.out.println("|" +(game[1][0]) + "|" + (game[1][1]) +"|"+ (game[1][2])+ "|");
+				System.out.println("-------");
+				System.out.println("|" +(game[2][0]) + "|" + (game[2][1]) +"|"+ (game[2][2])+ "|");
+				System.out.println("-------");
+				
 			}
 		}
 	}
