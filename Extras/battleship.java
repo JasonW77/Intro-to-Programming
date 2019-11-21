@@ -1,6 +1,6 @@
 // Author Jason Waters
-// Date 11/20/2019
-// Chapter8 battleship
+// Date 11/21/2019
+// Battleship
 
 import java.util.Scanner ;
 
