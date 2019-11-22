@@ -12,8 +12,8 @@ The game is played by the first player (the player owning the ships) picks the n
 and places them in a grid, choosing first an "x" axis and then a "y" axis.
 The second player will choose the placement of the bombs or mines to try and sink the ships.
 
-Explain what files are needed to run and which file to run. It is also helpful to include a screenshot of the program running. Make sure image is in your repository.
-[Image Caption](image.png)
+/*Explain what files are needed to run and which file to run. It is also helpful to include a screenshot of the program running. Make sure image is in your repository.
+[Image Caption](image.png) */
 
 ## Code Example
 Show a small snippet of the code you are proud of and why.
