@@ -20,11 +20,20 @@ public class Battleship {
 		System.out.println("Enter number of ships to place: ");
 		int ship = input.nextInt();
 		int hit = 1;
+		
 		for (int px = 0; px < ship; px++) {
 			System.out.print("Enter a row (0,thru 4) for player O: ");
 			int xr = input.nextInt();
+			while(xr > 4 || xr < 0){
+				System.out.print("Enter a row (0,thru 4) for player O: ");
+				xr = input.nextInt();
+			}
 			System.out.print("Enter a column (0,thru 4) for player O: ");
 			int xc = input.nextInt();
+			while(xc > 4 || xc < 0){
+				System.out.print("Enter a row (0,thru 4) for player O: ");
+				xc = input.nextInt();
+			}
 				if (game[xr][xc] == " "){
 					game[xr][xc] = "O";
 				}
@@ -35,6 +44,7 @@ public class Battleship {
 				}
 				
 		}
+
 		for (int g = 0; g < 25; g++) {
 			
 			if (hit <= ship){
