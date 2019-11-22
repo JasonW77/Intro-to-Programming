@@ -1,4 +1,4 @@
-# Java Battleship
+# **Java Battleship**
 
 ## Synopsis
 This is a game of Battleship, it is a two player game where the first player picks the number of ships
