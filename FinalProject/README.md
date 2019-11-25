@@ -12,7 +12,7 @@ The game is played by the first player (the player owning the ships) picks the n
 and places them in a grid, choosing first an "x" axis and then a "y" axis.
 The second player will choose the placement of the bombs or mines to try and sink the ships.
 
-Screen Shot 2019-11-25 at 11.38.21 AM
+[Caption of Image](Battleshipscreenshot.png)
 
 ## Code Example
 here is a code example of player one placing thier ships.
@@ -50,7 +50,7 @@ System.out.println("Enter number of ships to place: ");
 ```
 
 ## Tests
-Describe and show how to run the tests with code examples. State that you are using JUnit4 to test.
+there are no value returning methods.
 
 ## Contributors
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
