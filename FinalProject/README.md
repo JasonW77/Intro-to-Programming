@@ -12,13 +12,41 @@ The game is played by the first player (the player owning the ships) picks the n
 and places them in a grid, choosing first an "x" axis and then a "y" axis.
 The second player will choose the placement of the bombs or mines to try and sink the ships.
 
-/*Explain what files are needed to run and which file to run. It is also helpful to include a screenshot of the program running. Make sure image is in your repository.
-[Image Caption](image.png) */
+
 
 ## Code Example
-Show a small snippet of the code you are proud of and why.
+here is a code example of player one placing thier ships.
 ```
-Insert Code Here
+System.out.println("Enter number of ships to place: ");
+		int ship = input.nextInt();
+		int hit = 1;
+		int miss = 0;
+		for (int px = 0; px < ship; px++) {
+			System.out.print("Enter a row (0,thru 4) for Ship Location: ");
+			int xr = input.nextInt();
+			while(xr > 4 || xr < 0){
+				System.out.print("Enter a row (0,thru 4) for Ship Location: ");
+				xr = input.nextInt();
+			}
+			System.out.print("Enter a column (0,thru 4) for Ship Location: ");
+			int xc = input.nextInt();
+			while(xc > 4 || xc < 0){
+				System.out.print("Enter a row (0,thru 4) Ship Location: ");
+				xc = input.nextInt();
+			}
+				if (ogame[xr][xc] == " "){
+					ogame[xr][xc] = "O";
+				}
+				else if (ogame[xr][xc] == "O"){
+					System.out.println("\nShip already in this place!");
+					px++;
+					
+				}
+				
+		}
+		System.out.println("\n "+ ship + " Ships PLaced, X's Turn!");
+		System.out.println("\nX you only have " + (ship + 5) + " Bombs!");
+		System.out.println("\nGood Luck!");
 ```
 
 ## Tests
