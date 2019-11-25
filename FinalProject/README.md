@@ -9,8 +9,10 @@ This is a program for the Introduction to programming class final project. I cre
 
 ## How to Play
 The game is played by the first player (the player owning the ships) picks the number of ships
-and places them in a grid, choosing first an "x" axis and then a "y" axis.
+and places them in a 5x5 grid, choosing first an "x" axis and then a "y" axis.(0-4 respectively)
+
 The second player will choose the placement of the bombs or mines to try and sink the ships.
+they have 5 more bombs than ships placed to try and sink player ones ships.
 
 [Caption of Image](Battleshipscreenshot.png)
 
@@ -51,7 +53,3 @@ System.out.println("Enter number of ships to place: ");
 
 ## Tests
 there are no value returning methods.
-
-## Contributors
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-Also list any one who has already contributed to the project.
