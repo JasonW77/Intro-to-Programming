@@ -8,6 +8,8 @@ and places them in a grid. after which the second player tries to sink the ships
 This is a program for the Introduction to programming class final project. I created it for my final project in that class.
 
 ## How to Play
+This game is played using java.
+
 The game is played by the first player (the player owning the ships) picks the number of ships
 and places them in a 5x5 grid, choosing first an "x" axis and then a "y" axis.(0-4 respectively)
 
