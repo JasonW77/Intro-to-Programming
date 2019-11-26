@@ -7,7 +7,7 @@ package battleship;
  * 
  * @Author Jason Waters
  * Date 11/25/2019
- * Final Project - Battleship
+ * Final Project - Introduction to programming, CSCI 1105 
  * @version 1.0
  * @param ogame this is the array used to store player Ones ship locations
  * @param xgame this is the array that is used to store and print out the bomb drops from player Two
@@ -36,9 +36,9 @@ public class Battleship_final {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Enter number of ships to place: ");
+		System.out.println("Player One enter number of ships to place: ");
 		int ship = input.nextInt();
-		int hit = 1;
+		int hit = 0;
 		int miss = 0;
 		for (int px = 0; px < ship; px++) {
 			System.out.print("Enter a row (0,thru 4) for Ship Location: ");
@@ -50,7 +50,7 @@ public class Battleship_final {
 			System.out.print("Enter a column (0,thru 4) for Ship Location: ");
 			int xc = input.nextInt();
 			while(xc > 4 || xc < 0){
-				System.out.print("Enter a row (0,thru 4) Ship Location: ");
+				System.out.print("Enter a column (0,thru 4) Ship Location: ");
 				xc = input.nextInt();
 			}
 				if (ogame[xr][xc] == " "){
@@ -58,7 +58,7 @@ public class Battleship_final {
 				}
 				else if (ogame[xr][xc] == "O"){
 					System.out.println("\nShip already in this place!");
-					px++;
+					px--;
 					
 				}
 				
@@ -70,24 +70,36 @@ public class Battleship_final {
 		for (int g = 0; g < (ship + 5); g++) {
 			if (hit <= ship){
 				for (int po = 0; po < 1; po++) {
-					System.out.print("Player X, Enter a row (0,thru 4) to drop bomb: ");
+					System.out.print("Player X, Enter a row position (0,thru 4) to drop bomb: ");
 					int or = input.nextInt();
+					if (or > 4) {
+						System.out.print("invalid row entry, please choose either 0,1,2,3, or 4 ");
+					}
 					while(or > 4 || or < 0){
-						System.out.print("Player X, Enter a row (0,thru 4) to drop bomb: ");
+						System.out.print("Player Two, Enter a row position (0,thru 4) to drop bomb: ");
 						or = input.nextInt();
+						if (or > 4) {
+							System.out.print("invalid X entry, please choose either 0,1,2,3, or 4 ");
+						}
 					}
-					System.out.print("Player X, Enter a column (0,thru 4) to drop bomb: ");
+					System.out.print("Player X, Enter a column position (0,thru 4) to drop bomb: ");
 					int oc = input.nextInt();
-					while(oc > 4 || oc < 0){
-						System.out.print("Player X, Enter a column (0,thru 4) to drop bomb: ");
-						oc = input.nextInt();
+					if (oc > 4) {
+						System.out.print("invalid Y entry, please choose either 0,1,2,3, or 4 ");
 					}
-						if (ogame[or][oc] == " "){
+					while(oc > 4 || oc < 0){
+						System.out.print("Player Two, Enter a column position (0,thru 4) to drop bomb: ");
+						oc = input.nextInt();
+						if (oc > 4) {
+							System.out.print("invalid Y entry, please choose either 0,1,2,3, or 4 ");
+						}
+					}
+						if (ogame[or][oc] == " " && xgame[or][oc] == " ") {
 							xgame[or][oc] = "-";
 							System.out.println("Miss!");
 							miss++;
 						}
-						else if (ogame[or][oc] == "O"){
+						else if (ogame[or][oc] == "O" && xgame[or][oc] == " ") {
 							xgame[or][oc] = "X";
 							System.out.println("\nYou Sunk A battleship!");
 							hit++;
